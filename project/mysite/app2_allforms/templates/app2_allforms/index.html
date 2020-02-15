@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>My test page</title>
+</head>
+
+<body>
+    <p>This is index 7</p>
+
+    {% if the_context_object %}
+    <ul>
+        {% for foo in the_context_object %}
+        <li><a href="{% url 'app2_allforms:detail' foo.id %}">{{ foo.your_name }}</a></li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No foos are available.</p>
+    {% endif %}
+
+
+</body>
+
+</html>
