@@ -12,7 +12,9 @@
     {% if the_context_object %}
     <ul>
         {% for foo in the_context_object %}
-        <li><a href="{% url 'app2_allforms:detail' foo.id %}">{{ foo.your_name }}</a></li>
+        <li><a href="{% url 'app2_allforms:detailA' foo.id %}">{{ foo.your_name }}</a></li>
+        <li><a href="{% url 'app2_allforms:detailB' foo.id %}">{{ foo.your_name }}</a></li>
+        <li><a href="{% url 'app2_allforms:detailC' foo.id %}">{{ foo.your_name }}</a></li>
         {% endfor %}
     </ul>
     {% else %}

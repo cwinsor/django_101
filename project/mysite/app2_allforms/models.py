@@ -1,4 +1,6 @@
 from django.db import models
+from django.utils import timezone
+from django.urls import reverse
 
 
 # Create a database table with an attribute for each type of form
@@ -8,4 +10,15 @@ class ModelAllFormTypes(models.Model):
 
     def __str__(self):
         return self.your_name
+
+    #def get_absolute_url(self):
+    #    return reverse('app2_allforms.everything-detail', kwargs={'pk': self.pk})
+
+    #def get_fields(self):
+    #    return {
+    #        #"your_name": self.your_name,
+    #        "your_name": 'lala',
+    #        "your_name2": 'lala2',
+    #        #"a_date_time": a_date_time_field,
+    #        }
 
